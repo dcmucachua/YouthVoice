@@ -1114,7 +1114,7 @@ form p {
         margin-left: 9px;
     }
 
-         display: block;
+   .modal-content {
         justify-content: center;
         align-items: center;
         margin-top: 37%;
@@ -1134,7 +1134,6 @@ form p {
     .modal-content button {
         height: 35px;
     }
-
   }
 
 
