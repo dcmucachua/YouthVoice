@@ -1114,6 +1114,27 @@ form p {
         margin-left: 9px;
     }
 
+         display: block;
+        justify-content: center;
+        align-items: center;
+        margin-top: 37%;
+        margin-bottom: auto;
+        
+        padding: 10px; 
+        height: 53%;
+        width: 75%;
+    }
+
+    #username, #password {
+        width: 90%;
+        height: 30px;
+        margin-top: -10px;
+    }
+
+    .modal-content button {
+        height: 35px;
+    }
+
   }
 
 
