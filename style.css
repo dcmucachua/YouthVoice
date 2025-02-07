@@ -1134,6 +1134,11 @@ form p {
     .modal-content button {
         height: 35px;
     }
+
+    .post img {
+        width: 80%;
+        height: auto;
+    }
   }
 
 
