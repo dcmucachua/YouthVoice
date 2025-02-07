@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Youthvoice</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <header id="header">
+        <div class="container">
+            <div class="flex">
+                <div class="menu1">
+                    <a href=""><img id="menu2" src="./index.png"></a>
+
+                    <nav class="menu" id="navMenu">
+                        <ul>
+                            <li class="menu-button" data-window="firstWindow"><a href="#">Events</a></li>
+                            <li class="menu-button" data-window="secondWindow"><a href="#">Highlights</a></li>
+                            <li class="menu-button" data-window="thirdWindow"><a href="#">Interviews</a></li>
+                            <li class="menu-button" data-window="fourthWindow"><a href="#">News</a></li> 
+                            <li class="menu-button" data-window="fifthWindow"><a href="#">Daily Devotions</a></li>
+                        </ul>
+                    </nav>
+
+                    <div class="btn-contato">
+                        <div class="search-bt" id="searchbt">
+                            <a href="#"><i class="fa-solid fa-magnifying-glass"></i></a>
+                        </div>
+                        <div class="contato" id="contato">
+                            <a href="#"><button>CONTATO</button></a>
+                        </div>
+                        <div class="contato0" id="contato">
+                            <a href="#"><button><i class="fa-solid fa-phone"></i></button></a>
+                        </div>
+
+                        <div class="account" id="account">
+                            <a href="#"><i class="fa-solid fa-circle-user"></i></a>
+                        </div>
+
+                    </div>
+                </div><!--menu1-->
+
+            </div><!--flex-->
+            <div>
+                <!--<div class="search-box" id="elementToStay">
+                    <input type="text" class="search-txt" placeholder="Search for what you want..." onkeyup="search()">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </div>-->
+
+                <div class="search-container"> 
+                    <input type="text" class="search-bar" placeholder="Search for what you want..." onfocus="expandSearch()" onblur="shrinkSearch()"> 
+                    <a href=""><button class="search-button"><i class="fa-solid fa-magnifying-glass"></i></button></a>
+                </div>
+
+                <div id="search-window" class="oculto">
+                    <input type="text" id="search-bar1" placeholder="Pesquisar...">
+                    <button class="bt2" id="search-button" onclick="search()">Pesquisar</button>
+                    <button class="bt0" id="close-window"><i class="fas fa-xmark"></i></button>
+                    <div id="results"></div>
+                </div>
+
+                <!--<div class="search-box" id="elementToStay"> 
+                    <input type="text" class="search-bar" placeholder="Search for what you want..." onkeyup="search()"> 
+                    <button class="search-button"><i class="fa-solid fa-magnifying-glass"></i></button> 
+                </div>-->
+            </div>
+        </div><!--container-->
+
+    </header>
+
+    <div class="hamburger">
+        <span id="icon" class="icon-container">
+            <i id="toggle-icon" class="fa-solid fa-bars icon"></i>
+        </span>
+    </div>
+    <div class="sidebar" id="sidebar">
+        <a class="button1" id="firstWindowButton" href="#"><i class="fas fa-calendar-alt"></i>Events</a>
+        <a class="button1" id="secondWindowButton" href="#"><i class="fas fa-highlighter"></i>Highlights</a>
+        <a class="button1" id="thirdWindowButton" href="#"><i class="fas fa-microphone"></i>Interviews</a>
+        <a class="button1" id="fourthWindowButton" href="#"><i class="fas fa-newspaper"></i>News</a>
+        <a class="button1" id="fifthWindowButton" href="#"><i class="fas fa-book"></i>Daily Devotions</a>
+        <a class="button1" id="openCommentsButton" href="#"><i class="fa-solid fa-comments"></i>Comentários Recentes</a>
+        <!-- Outras opções -->
+    </div>
+    
+    <script>
+        document.addEventListener("scroll", function() {
+            var header = document.getElementById("header");
+            var navMenu = document.getElementById("navMenu");
+            var logo = document.getElementById("menu2");
+            var elementsToHide = document.querySelectorAll(".menu");
+            var account = document.querySelector(".account");
+            var searchBox = document.getElementById("elementToStay");
+
+            if (window.scrollY > 50) {
+                elementsToHide.forEach(function(element) {
+                    element.classList.add("hidden");
+                });
+                header.classList.add("shrink");
+                logo.classList.add("shrink");
+                account.classList.add("shrink");
+                searchBox.classList.add("shrink");
+            } else {
+                elementsToHide.forEach(function(element) {
+                    element.classList.remove("hidden");
+                });
+                header.classList.remove("shrink");
+                logo.classList.remove("shrink");
+                account.classList.remove("shrink");
+                searchBox.classList.remove("shrink");
+            }
+        }); //
+
+
+      </script>
+
+<div id="loginModal" class="modal"> 
+    <div class="modal-content"> 
+        <span class="close">&times;</span> 
+        <h2>Login</h2> 
+        <form> 
+           <!--<label for="username">Usuário:</label> -->
+            <input type="text" id="username" placeholder="Email ou telefone" name="username"> 
+            <br> 
+           <!-- <label for="password">Senha:</label> -->
+            <input type="password" id="password" placeholder="Senha" name="password"> 
+            <br> 
+            <button type="button" id="loginBtn">Login</button> 
+            <li><a href="#">Esqueceu senha?</a></li>
+            <p>_______________ou______________</p>
+            <button type="button" id="loginBtn1"><img src="./img/google-logo-search-new-svgrepo-com.svg" alt="" width="22px"> Entrar com Google</button>
+        </form> 
+    </div>
+</div>
+
+<div class="overlay-contato" id="overlay-contato">
+    <div class="contact-window">
+        <button class="close1">&times;</button>
+        <h2>Contate o Proprietário</h2>
+        <div class="contact-links">
+        <a href="https://wa.me/SeuNumero" target="_blank" class="whatsapp">WhatsApp</a>
+        <a href="mailto:seuemail@exemplo.com" class="email">Email</a>
+        <a href="https://t.me/SeuUsuario" target="_blank" class="telegram">Telegram</a>
+        <a href="https://www.instagram.com/SeuUsuario" target="_blank" class="instagram">Instagram</a>
+        </div>
+    </div>
+</div>
+
+    <div id="firstWindow" class="window"> 
+        <button class="close-button">Fechar</button> 
+        <div id="firstWindow" class="post" data-theme="Tema 2" data-url="detalhes-tema2.html"></div>
+    </div> 
+    <div id="secondWindow" class="window"> 
+        <button class="close-button">Fechar</button> 
+        <div id="secondWindow" class="post" data-theme="Tema 3" data-url="detalhes-tema3.html">
+            <h1>Hello Word</h1>
+            <p>Eu estou bem graças a Deus</p>
+        </div> 
+    </div> 
+    <div id="thirdWindow" class="window"> 
+        <button class="close-button">Fechar</button> 
+        <div id="thirdWindow" class="post" data-theme="Tema 4" data-url="detalhes-tema4.html">
+            <h1>Olá Mundo</h1>
+            <p>Irei a escola em breve</p>
+        </div> 
+    </div> 
+    <div id="fourthWindow" class="window"> 
+        <button class="close-button">Fechar</button> 
+        <div id="fourthWindow" class="post" data-theme="Tema 5" data-url="detalhes-tema5.html"></div> 
+    </div> 
+    <div id="fifthWindow" class="window"> 
+        <button class="close-button">Fechar</button> 
+        <div id="fifthWindow" class="post" data-theme="Tema 6" data-url="detalhes-tema6.html"></div> 
+    </div>
+
+    <div class="content"> 
+        <h2>Wellcome to...</h2> 
+        <img src="./index.png"> 
+
+    <div id="index" class="post" data-theme="Tema 1" data-url="detalhes-tema1.html"></div>
+    <div id="comment-section" style="display: none;">
+        <h3>Comentários</h3>
+        <div id="comments"></div>
+        <textarea id="commentText" placeholder="Escreva um comentário..."></textarea>
+        <button id="submitComment">Enviar Comentário</button>
+    </div>
+
+    
+
+    <footer> 
+        <div class="footer-top">
+            <div class="logo">
+                <img src="index.png" alt="Logo" width="140" height="95"> <!-- Altere o caminho da imagem e os tamanhos conforme necessário -->
+            </div> 
+            <div class="footer-section"> 
+                <h4>Outras redes</h4> 
+                <ul> 
+                    <li><a id="linkedin-link" href="#" target="_blank"><i class="fa-brands fa-facebook"></i>Facebook</a></li> 
+                    <li><a id="linkedin-link" href="#" target="_blank"><i class="fa-brands fa-tiktok"></i>Tiktok</a></li>
+                    <li><a id="linkedin-link" href="#" target="_blank"><i class="fa-brands fa-instagram"></i>Instagram</a></li> 
+                    <li><a id="linkedin-link" href="#" target="_blank"><i class="fa-brands fa-youtube"></i>Youtube</a></li> 
+                </ul> 
+            </div> 
+            <div class="footer-section"> 
+                <h4>Novidades</h4> 
+                <ul> 
+                    <li><a href="#">Notícias</a></li> 
+                </ul> 
+            </div> 
+            <div class="footer-section"> 
+                <h4>Contatos</h4> 
+                <ul> 
+                    <li><a id="linkedin-link" href="#" target="_blank"><i class="fa-brands fa-facebook"></i>Facebook</a></li> 
+                    <li><a id="linkedin-link" href="#" target="_blank"><i class="fa-brands fa-whatsapp"></i>Whatsapp</a></li> 
+                    <li><a id="linkedin-link" href="mailto:email@empresa.com" target="_blank"><i class="fa-solid fa-envelope"></i>E-mail</a></li> 
+                </ul> 
+            </div> 
+            <div class="footer-section"> 
+                <h4>Companhia</h4> 
+                <ul> 
+                    <li>Ano de criação: 2025</li> 
+                    <li>E-mail: <a href="mailto:email@empresa.com">email@empresa.com</a></li> 
+                    <li>Criador: Nome do Criador</li> 
+                </ul> 
+            </div> 
+        </div> 
+        <div class="footer-bottom"> 
+            <a href="./politic.html"><i class="fas fa-lock"></i>Políticas de privacidade</a> 
+            <a href="#"><i class="fas fa-at"></i>Suporte</a> 
+            <a href="#"><i class="fas fa-file-alt"></i>Termos e condições</a> 
+            <a href="#"><i class="fa-solid fa-phone"></i>Contacte-nos</a> 
+        </div> 
+    </footer> 
+    <div id="window1" class="window"> 
+        Conteúdo da Página 1 
+        <footer> 
+            <div class="footer-top"> 
+                <div class="footer-section">
+                     <h4>Outras redes</h4> 
+                     <ul> 
+                        <li><a href="#">Facebook</a></li> 
+                        <li><a href="#">Instagram</a></li> 
+                    </ul> 
+                </div> 
+                <div class="footer-section"> 
+                    <h4>Novidades</h4> 
+                    <ul> 
+                        <li><a href="#">Notícias</a></li> 
+                    </ul> 
+                </div> 
+                <div class="footer-section"> 
+                    <h4>Contatos</h4> 
+                    <ul> 
+                        <li><a href="#">Facebook</a></li> 
+                        <li><a href="#">Whatsapp</a></li> 
+                        <li><a href="mailto:email@empresa.com">E-mail</a></li> 
+                    </ul> 
+                </div> 
+                <div class="footer-section"> 
+                    <h4>Companhia</h4> 
+                    <ul> 
+                        <li>Ano de criação: 2025</li> 
+                        <li>E-mail: <a href="mailto:email@empresa.com">email@empresa.com</a></li> 
+                        <li>Criador: Nome do Criador</li> 
+                    </ul> 
+                </div> 
+            </div> 
+            <div class="footer-bottom"> 
+                <a href="#">Políticas de privacidade</a> 
+                <a href="#">Suporte</a> <a href="#">Termos e condições</a> 
+                <a href="#">Contacte-nos</a> 
+            </div> 
+        </footer> 
+    </div> 
+    <div id="window2" class="window"> 
+        Conteúdo da Página 2 
+        <footer> 
+            <div class="footer-top"> 
+                <div class="footer-section"> 
+                    <h4>Outras redes</h4> 
+                    <ul> 
+                        <li><a href="#"><i class="fa-brands fa-facebook"></i>Facebook</a></li> 
+                        <li><a href="#"><i class="fa-brands fa-tiktok"></i>Tiktok</a></li>
+                        <li><a href="#"><i class="fa-brands fa-instagram"></i>Instagram</a></li> 
+                        <li><a href="#"><i class="fa-brands fa-youtube"></i>Youtube</a></li>
+                    </ul> 
+                </div> 
+                <div class="footer-section"> 
+                    <h4>Novidades</h4> 
+                    <ul> 
+                        <li><a href="#">Notícias</a></li> 
+                    </ul> 
+                </div> 
+                <div class="footer-section"> 
+                    <h4>Contatos</h4> 
+                    <ul> 
+                        <li><a href="#">Facebook</a></li> 
+                        <li><a href="#">Whatsapp</a></li> 
+                        <li><a href="mailto:email@empresa.com">E-mail</a></li> 
+                    </ul> 
+                </div> 
+                <div class="footer-section"> 
+                    <h4>Companhia</h4> 
+                    <ul> 
+                        <li>Ano de criação: 2025</li> 
+                        <li>E-mail: <a href="mailto:email@empresa.com">email@empresa.com</a></li> 
+                        <li>Criador: Nome do Criador</li> 
+                    </ul> 
+                </div> 
+            </div> 
+            <div class="footer-bottom"> 
+                <a href="#">Políticas de privacidade</a> 
+                <a href="#">Suporte</a> 
+                <a href="#">Termos e condições</a> 
+                <a href="#">Contacte-nos</a> 
+            </div>
+        <footer-credits>
+        <p>&copy; 2025 Youthvoice. All rights reserved.</p> 
+        </footer>
+    </footer>
+    
+<script src="script.js"></script>
+<script src="publi.js"></script>
+</body>
+</html>
