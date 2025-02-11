@@ -4,8 +4,9 @@ body {
     margin: 0;
     padding: 0;
     background-repeat: no-repeat;
+    overflow-x: hidden;
 
-    background-size: 250%; /* Ajusta a imagem para cobrir toda a área */
+    background-size: 265%; /* Ajusta a imagem para cobrir toda a área */
     
 }
 
