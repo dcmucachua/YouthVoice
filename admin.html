@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <title>Administração do Site</title>
+    <link rel="stylesheet" href="stylle.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+</head>
+<header>
+    <div class="logo">
+        <img src="./index.png">
+    </div>
+    <div class="header">
+        <a href="#" class="open-button"><i class="fa-solid fa-pen-to-square"></i><p>Nova Publicação</p></a>
+        <a href="./index.html"><i class="fa-solid fa-house-chimney"></i><p>Página Inicial</p></a>
+        <a href="#" id="win22"><i class="fa-solid fa-wand-magic-sparkles"></i><p>Editar Publicação</p></a>
+    </div>
+    <div class="hamburger">
+        <i id="toggle-icon" class="fa-solid fa-bars"></i>
+    </div>
+</header>
+<body background="./img/pexels-bri-schneiter-28802-346529.jpg">
+
+    <div class="boddy">
+        <div class="text">
+            <h1>BEM VINDO AO MENU DE <span>ADMINISTRAÇÃO DO YOUTHVOICE</span></h1>
+        </div>
+    </div>
+
+    <div class="sidebar">
+        <a class="button1" id="openbutton1" href="#"><i class="fa-solid fa-pen-to-square"></i>Nova Publicação</a>
+        <a id="win2" class="win-dows6" href="#"><i class="fa-solid fa-wand-magic-sparkles"></i>Editar Publicação</a>
+        <a class="button1" onclick="openModal(3)" href="#"><i class="fas fa-copyright"></i>Direitos Autorais</a>
+        <a class="button1" onclick="openModal(4)" href="#"><i class="fas fa-user-plus"></i>Subscritores</a>
+        <a class="button1" onclick="openModal(5)" href="./index.html"><i class="fa-solid fa-house-chimney"></i>Página Inicial</a>
+        <a class="button1" id="openCommentsButton" href="#"><i class="fa-solid fa-comments"></i>Comentários Recentes</a>
+        <!-- Outras opções -->
+    </div>
+
+    <div class="backdropp" id="backdropp"></div>
+
+<!-- Formulários de publicação -->
+<div id="form-post0" class="formPost">
+    <button class="backButton">X</button>
+    <h2>Fazer uma publicação</h2>
+    <form id="form-publ0" enctype="multipart/form-data">
+        <div class="file-upload">
+            <label for="file-input">
+                <i class="fas fa-plus"></i>
+            </label>
+            <input type="file" id="media0" accept="image/*,video/*" multiple>
+        </div>
+        <textarea class="contents" id="content0" rows="1" placeholder="Digite o conteúdo" oninput="toggleButton()"></textarea>
+        <div id="preview0" class="preview"></div>
+        <button class="publ" id="publ0" type="button" onclick="publishPost(0)"><i class="fas fa-upload"></i></button>
+    </form>
+</div>
+<div id="form-post1" class="formPost">
+    <button class="backButton">X</button>
+    <h2>Fazer uma publicação</h2>
+    <form id="form-publ1" enctype="multipart/form-data">
+        <div class="file-upload">
+            <label for="file-input">
+                <i class="fas fa-plus"></i>
+            </label>
+            <input type="file" id="media1" accept="image/*,video/*" multiple>
+        </div>
+        <textarea class="contents" id="content1" rows="1" placeholder="Digite o conteúdo" oninput="toggleButton()"></textarea>
+
+        <div id="preview1" class="preview"></div>
+        <button class="publ" id="publ1" type="button" onclick="publishPost(1)"><i class="fas fa-upload"></i></button>
+    </form>
+</div>
+<div id="form-post2" class="formPost">
+    <button class="backButton">X</button>
+    <h2>Fazer uma publicação</h2>
+    <form id="form-publ2" enctype="multipart/form-data">
+        <div class="file-upload">
+            <label for="file-input">
+                <i class="fas fa-plus"></i>
+            </label>
+            <input type="file" id="media2" accept="image/*,video/*" multiple>
+        </div>
+        <textarea class="contents" id="content2" rows="1" placeholder="Digite o conteúdo" oninput="toggleButton()"></textarea>
+
+        <div id="preview2" class="preview"></div>
+        <button class="publ" id="publ2" type="button" onclick="publishPost(2)"><i class="fas fa-upload"></i></button>
+    </form>
+</div>
+<div id="form-post3" class="formPost">
+    <button class="backButton">X</button>
+    <h2>Fazer uma publicação</h2>
+    <form id="form-publ3" enctype="multipart/form-data">
+        <div class="file-upload">
+            <label for="file-input">
+                <i class="fas fa-plus"></i>
+            </label>
+            <input type="file" id="media3" accept="image/*,video/*" multiple>
+        </div>
+        <textarea class="contents" id="content3" rows="1" placeholder="Digite o conteúdo" oninput="toggleButton()"></textarea>
+
+        <div id="preview3" class="preview"></div>
+        <button class="publ" id="publ3" type="button" onclick="publishPost(3)"><i class="fas fa-upload"></i></button>
+    </form>
+</div>
+<div id="form-post4" class="formPost">
+    <button class="backButton">X</button>
+    <h2>Fazer uma publicação</h2>
+    <form id="form-publ4" enctype="multipart/form-data">
+        <div class="file-upload">
+            <label for="file-input">
+                <i class="fas fa-plus"></i>
+            </label>
+            <input type="file" id="media4" accept="image/*,video/*" multiple>
+        </div>
+        <textarea class="contents" id="content4" rows="1" placeholder="Digite o conteúdo" oninput="toggleButton()"></textarea>
+
+        <div id="preview4" class="preview"></div>
+        <button class="publ" id="publ4" type="button" onclick="publishPost(4)"><i class="fas fa-upload"></i></button>
+    </form>
+</div>
+<div id="form-post5" class="formPost">
+    <button class="backButton">X</button>
+    <h2>Fazer uma publicação</h2>
+    <form id="form-publ5" enctype="multipart/form-data">
+        <div class="file-upload">
+            <label for="file-input">
+                <i class="fas fa-plus"></i>
+            </label>
+            <input type="file" id="media5" accept="image/*,video/*" multiple>
+        </div>
+        <textarea class="contents" id="content5" rows="1" placeholder="Digite o conteúdo" oninput="toggleButton()"></textarea>
+        
+        <div id="preview5" class="preview"></div>
+        <button class="publ" id="publ5" type="button" onclick="publishPost(5)"><i class="fas fa-upload"></i></button>
+    </form>
+</div>
+
+<div id="post-edt" class="post-edt">
+    <h2>Para editar suas publicações AQUI</h2>
+    <div class="post11" id="post11"></div>
+    <button id="closePostEdt" class="backButton">Voltar</button>
+</div>
+    <div class="overlay0" id="overlay0"></div>
+    <div id="comentk" class="commentboxk">
+        <button id="closebuttonk" class="backButtonk">Fechar</button>
+        <h2>Os comentários são apresentados aqui</h2>
+        <div class="coment11" id="coment11"></div>
+    </div>
+
+    <!-- Repita para as outras janelas -->
+    <!-- ... -->
+
+    <!-- <div id="win02" class="win-dows06">
+        <h2>Editar ou Excluir Postagens</h2>
+        <div id="postList"></div>
+    </div> -->
+
+    <!-- Repita para as outras janelas -->
+    <!-- ... -->
+    
+
+
+   <!-- <script>
+        // Exemplo de script para abrir e fechar o modal
+        var modal = document.getElementById("myModal");
+        var span = document.getElementsByClassName("close")[0];
+
+        function openModal() {
+            modal.style.display = "block";
+        }
+
+        span.onclick = function() {
+            modal.style.display = "none";
+        }
+
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+
+        // Adicionar o evento de clique às opções do sidebar
+        var sidebarLinks = document.querySelectorAll('.sidebar a');
+        sidebarLinks.forEach(function(link) {
+            link.addEventListener('click', openModal);
+        });
+    </script> -->
+   <!-- <div id="alert-modal" class="modal2">
+        <div class="alert-modal-content">
+            <span class="close-alert-btn">&times;</span>
+            <h2>Publicação Concluída</h2>
+            <p id="alert-message"></p>
+            <button class="alert-ok-btn" onclick="redirectToIndex()">OK</button>
+        </div>
+    </div> -->
+
+    <!--RESPONSIVE AREA-->
+
+    <!-- <div id="win1" class="win-dows">
+        <div class="modal-content">
+            <button class="close1-btn" onclick="closeModal(1)">X</button>
+            <h2>Publicar Conteúdo</h2>
+            <form id="publish-form">
+                <div class="form-group">
+                    <label for="title">Título</label>
+                    <input type="text" id="title" name="title" required>
+                </div>
+                <div class="form-group">
+                    <label for="content">Conteúdo</label>
+                    <textarea id="content" name="content" rows="4" required></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="media">Upload de Imagem ou Vídeo</label>
+                    <input type="file" id="media" name="media" accept="image/*,video/*" onchange="previewMedia()" multiple>
+                    <div id="media-preview"></div>
+                </div>
+                <button type="button" id="principal">Publicar na Div Principal</button>
+            </form> -->
+        </div>
+    </div>
+   <!-- <div id="win2" class="win-dows">
+        <div class="modal-content">
+            <button class="close1-btn" onclick="closeModal(2)">X</button>
+            <h2>Editar Publicações</h2>
+            <div id="posts-summary"></div>
+            <div id="post-detail" style="display: none;">
+                <h3 id="post-title"></h3>
+                <div id="post-media"></div>
+                <textarea id="post-content" rows="4"></textarea>
+                <button class="edit-btn" onclick="saveEdit()">Salvar Alterações</button>
+                <button class="delete-btn" onclick="deletePost()">Excluir Publicação</button>
+            </div>
+        </div>
+    </div> -->
+
+    <!-- Botão para abrir a janela modal -->
+<!-- <button class="button1" onclick="openModal(1)">Abrir Modal</button> -->
+
+<!-- Janela Modal -->
+<div class="backdropy" id="backdrop1">
+    <div class="modal-window" id="modalwindow1">
+        <button class="close-btn" id="closebutton1">X</button>
+        <h1>O que pretende Publicar?</h1>
+        <div class="options">
+            <a href="#" class="openFormPost" id="principal"><h3>Menu</h3></a>
+            <a href="#" class="openFormPost" id="btn-post1"><h3>Events</h3></a>
+            <a href="#" class="openFormPost" id="btn-post2"><h3>Highlights</h3></a>
+            <a href="#" class="openFormPost" id="btn-post3"><h3>Interviews</h3></a>
+            <a href="#" class="openFormPost" id="btn-post4"><h3>News</h3></a>
+            <a href="#" class="openFormPost" id="btn-post5"><h3>Daily Devotions</h3></a>
+        </div>
+    </div>
+</div>
+
+
+    <!-- Outras Modais (Janela 2, Janela 3, etc.) 
+    <div id="win3" class="win-dows"><div class="modal-content"><button class="close1-btn" onclick="closeModal(3)">X</button><h2>Janela 3</h2></div></div>
+    <div id="win4" class="win-dows"><div class="modal-content"><button class="close1-btn" onclick="closeModal(4)">X</button><h2>Janela 4</h2></div></div>
+    <div id="win5" class="win-dows"><div class="modal-content"><button class="close1-btn" onclick="closeModal(5)">X</button><h2>Janela 5</h2></div></div>
+    <div id="win6" class="win-dows"><div class="modal-content"><button class="close1-btn" onclick="closeModal(6)">X</button><h2>Janela 6</h2></div></div> -->
+
+    <div class="post" id="index"></div>
+
+</body>
+<script src="scrip.js"></script>
+
+</html>
