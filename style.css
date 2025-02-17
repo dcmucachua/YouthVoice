@@ -152,6 +152,11 @@ header ul li a {
     .search-bt {
         display: none
     }
+
+    #index, #firstWindow, #secondWindow, #thirdWindow, #fourthWindow, #fifthWindow {
+        margin-left: auto;
+        margin-right: auto;
+    }
 }
 
 
@@ -558,6 +563,7 @@ footer {
     margin-left: 20px; /* Espaço entre a imagem e o texto */
 
 } 
+
 
 .footer-section { 
     margin-right: 20px; 
@@ -1099,12 +1105,13 @@ form p {
     }
 
     .shrink .search-bt {
-        margin-right: 40px;
+        margin-right: 5px;
         margin-top: 5px;
     }
 
     .shrink .account {
         margin-top: 8px;
+        margin-left: -11px;
     }
     
 
@@ -1114,7 +1121,8 @@ form p {
         margin-left: 9px;
     }
 
-   .modal-content {
+
+    .modal-content {
         justify-content: center;
         align-items: center;
         margin-top: 37%;
@@ -1139,6 +1147,8 @@ form p {
         width: 80%;
         height: auto;
     }
+    
+
   }
 
 
@@ -1198,7 +1208,7 @@ form p {
   .post {
     width: 95%;
     display: block;
-    margin: 0 auto;
+    margin-left: -6px;
     margin-bottom: 20px;
     align-items: center;
     text-align: center;
