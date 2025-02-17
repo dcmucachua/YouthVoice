@@ -3,10 +3,10 @@ body {
     height: 100%;
     margin: 0;
     padding: 0;
-    background-repeat: no-repeat;
+    background-repeat: repeat;
     overflow-x: hidden;
 
-    background-size: 265%; /* Ajusta a imagem para cobrir toda a área */
+    background-size: 270%; /* Ajusta a imagem para cobrir toda a área */
     
 }
 
@@ -397,13 +397,13 @@ body.modal-open .custom-modal-content * {
 @media (max-width: 600px) {
     .logo img {
         padding: 10px;
-        width: 75px;
+        width: 80px;
     }
 
     .header {
-        font-size: 15px;
+        font-size: 20px;
         position: absolute;
-        top: -22px;
+        top: -28px;
         right: 0;
     }
 
@@ -430,8 +430,8 @@ body.modal-open .custom-modal-content * {
     .sidebar {
         height: 78%;
         width: 225px;
-        margin-left: -160px;
-        margin-top: 0;
+        margin-left: -150px;
+        margin-top: -5px;
     }
 
     .boddy h1 {
@@ -473,7 +473,7 @@ body.modal-open .custom-modal-content * {
     .options a {
         font-size: 14px;
         height: 23px;
-        max-width: 60%;
+        max-width: 67%;
 
         
     }
@@ -691,6 +691,7 @@ body.modal-open .custom-modal-content * {
     background: #f44336;
     color: #fff;
     border: none;
+    border-radius: 3px;
     padding: 5px 10px;
     cursor: pointer;
 }
