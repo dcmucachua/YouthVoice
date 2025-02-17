@@ -512,7 +512,7 @@ body.modal-open .custom-modal-content * {
         display: flex;
         flex-direction: row;
         width: 100%;
-        border-radius: 5px;
+        border-radius: 10px;
         align-items: end;
         justify-content: space-between;
 
@@ -557,13 +557,24 @@ body.modal-open .custom-modal-content * {
       .formPost .publ {
         max-width: 35px;
         height: 35px;
-        border-radius: 10px;
         margin-bottom: 0;
       }
 
-      .formPost .backButton {
-        margin-left: 210px;
+      .formPost form .publ img {
+        align-items: center;
+        text-align: center;
+        margin-left: -7px;
       }
+
+      .formPost form .publ {
+        border-top-right-radius: 10px;
+        border-bottom-right-radius: 10px;
+      }
+
+      .formPost .backButton {
+        margin-left: 90%;
+      }
+      
 
     
 }
@@ -577,7 +588,7 @@ body.modal-open .custom-modal-content * {
     }
 
     .formPost .backButton {
-        margin-left: 510px;
+        margin-left: 550px;
     }
     
 }
@@ -592,8 +603,9 @@ body.modal-open .custom-modal-content * {
   .file-upload label {
     display: flex;
     align-items: center;
+    text-align: center;
     cursor: pointer;
-    color: #fff;
+    color: #d6d6d6;
     background-color: none;
     padding: 5px 13px;
     border-radius: 5px;
@@ -602,7 +614,7 @@ body.modal-open .custom-modal-content * {
   .file-upload label i {
     align-items: center;
     text-align: center;
-    margin-bottom: 6px;
+    margin-bottom: 7px;
   }
 
   .file-upload input[type="file"] {
@@ -802,13 +814,22 @@ body.modal-open .custom-modal-content * {
 }
 
 
-.preview img, .preview video {
-    max-height: 150px;
-    margin: 5px;
-    position: relative;
 
-    display: grid;
-}
+  .preview {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 20px;
+  }
+
+  .preview img {
+    max-width: 100px;
+    max-height: 100px;
+    object-fit: cover;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  }
 
 .preview .remove-file {
     position: absolute;
