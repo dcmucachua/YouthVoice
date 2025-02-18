@@ -430,7 +430,7 @@ body.modal-open .custom-modal-content * {
     .sidebar {
         height: 78%;
         width: 225px;
-        margin-left: -150px;
+        margin-left: -134px;
         margin-top: -5px;
     }
 
@@ -560,7 +560,7 @@ body.modal-open .custom-modal-content * {
         margin-bottom: 0;
       }
 
-      .formPost form .publ img {
+      .formPost .publ img {
         align-items: center;
         text-align: center;
         margin-left: -7px;
@@ -572,7 +572,7 @@ body.modal-open .custom-modal-content * {
       }
 
       .formPost .backButton {
-        margin-left: 90%;
+        margin-left: 92%;
       }
       
 
@@ -588,7 +588,7 @@ body.modal-open .custom-modal-content * {
     }
 
     .formPost .backButton {
-        margin-left: 550px;
+        margin-left: 510px;
     }
     
 }
@@ -814,22 +814,13 @@ body.modal-open .custom-modal-content * {
 }
 
 
+.preview img, .preview video {
+    max-height: 150px;
+    margin: 5px;
+    position: relative;
 
-  .preview {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-    margin-top: 20px;
-  }
-
-  .preview img {
-    max-width: 100px;
-    max-height: 100px;
-    object-fit: cover;
-    border: 2px solid #ddd;
-    border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-  }
+    display: grid;
+}
 
 .preview .remove-file {
     position: absolute;
