@@ -108,20 +108,6 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 
-const textInput = document.getElementById('text-input');
-        const formContainer = document.getElementById('form-container');
-
-        textInput.addEventListener('input', function() {
-            // Aumentar a altura da área de texto automaticamente
-            textInput.style.height = 'auto';
-            textInput.style.height = textInput.scrollHeight + 'px';
-
-            // Ajustar a posição do form-container para que fique acima do teclado
-            const formContainerHeight = formContainer.offsetHeight;
-            window.scrollTo(0, document.body.scrollHeight);
-            formContainer.style.bottom = `${formContainerHeight}px`;
-        });
-
         window.addEventListener('resize', function() {
             const formContainerHeight = formContainer.offsetHeight;
             formContainer.style.bottom = '0px';
