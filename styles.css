@@ -2,6 +2,7 @@ body, html {
     margin: 0;
     padding: 0;
     height: 100%;
+    overflow: hidden;
 }
 
 body {
@@ -9,7 +10,7 @@ body {
     background-color: #0e0030;
     color: #333;
     min-height: 100vh;
-    overflow: hidden;
+    
 }
 
 .logo img {
@@ -162,7 +163,7 @@ main {
 
 
 .modal-content .close {
-    color: #c2c2c2;
+    color: #3a3a3a;
     float: right;
     font-size: 28px;
     font-weight: bold;
@@ -170,7 +171,7 @@ main {
 }
 
 #content00 {
-    background-color: rgba(185, 185, 185, 0.8);
+    background-color: rgba(247, 247, 247, 0.8);
     margin: 15% auto;
     padding: 20px;
     border: 1px solid #888;
@@ -184,8 +185,7 @@ main {
     position: fixed;
     top: -145px;
     left: 74vw;
-
-        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     
 }
 
@@ -285,7 +285,11 @@ main {
     }
 
     #content00 a {
-        font-size: 10px;
+        font-size: 15px;
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+        padding-right: 5px;
     }
 
     #content11 {
