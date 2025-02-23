@@ -97,3 +97,12 @@ document.addEventListener('DOMContentLoaded', () => {
         icon.classList.toggle('fa-moon');
     });
 });
+
+
+document.addEventListener('DOMContentLoaded', function () {
+    const textInput = document.getElementById('text-input');
+    textInput.addEventListener('input', function () {
+        this.style.height = 'auto';
+        this.style.height = (this.scrollHeight) + 'px';
+    });
+});
