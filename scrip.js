@@ -46,6 +46,47 @@ hamburger.addEventListener('click', function(event) {
 
 
 
+
+
+
+
+   /* document.getElementById('media1').addEventListener('change', (event) => {
+        const files = event.target.files;
+        const preview = document.getElementById('preview1');
+        preview.innerHTML = '';
+
+        for (let i = 0; i < files.length; i++) {
+            const file = files[i];
+
+            if (file) {
+                const reader = new FileReader();
+                reader.onload = (e) => {
+                    const result = e.target.result;
+                    if (file.type.startsWith('image/')) {
+                        const img = document.createElement('img');
+                        img.src = result;
+                        preview.appendChild(img);
+                    } else if (file.type.startsWith('video/')) {
+                        const video = document.createElement('video');
+                        video.src = result;
+                        video.controls = true;
+                        preview.appendChild(video);
+                    } else {
+                        console.error('Tipo de arquivo não suportado:', file.type);
+                    }
+                };
+                reader.onerror = (err) => {
+                    console.error('Erro ao ler o arquivo:', err);
+                };
+                reader.readAsDataURL(file);
+            } else {
+                console.error('Não foi possível ler o arquivo:', file);
+            }
+        }
+    });
+*/
+
+
 // RESPONSIVE AREA //
 
 /* let posts = [];
@@ -59,7 +100,6 @@ function openModal(modalNumber) {
         loadPostsSummary();
     }
 }
-
 function closeModal(modalNumber) {
     document.getElementById('win' + modalNumber).classList.remove('show');
     setTimeout(function() {
@@ -529,7 +569,7 @@ function closeModal(modalNumber) {
 
 // NOVO SCRIPT DA PRIMEIRA JANELA DE POST //
 
-const openBtn1 = document.getElementById('openbutton1');
+/*const openBtn1 = document.getElementById('openbutton1');
 const openBtns = document.querySelectorAll('.open-button');
 const closeBtn = document.getElementById('closebutton1');
 const backdropy = document.getElementById('backdrop1');
@@ -556,7 +596,7 @@ closeBtn.addEventListener('click', function() {
     setTimeout(() => {
         backdropy.style.display = 'none';
     }, 500);
-});
+}); */
 
 // PUBLICAÇÃO SCRIPT //
 
@@ -770,6 +810,33 @@ openButton.addEventListener('click', () => {
             }
         } */
 
+       /*     document.addEventListener('DOMContentLoaded', function() {
+                const inputFile = document.getElementById('file-input');
+          
+                inputFile.addEventListener('change', function (event) {
+                  for (let i = 0; i < 6; i++) {
+                    const preview = document.getElementById('preview' + i);
+                    preview.innerHTML = ''; // Limpa a pré-visualização atual
+                  }
+                  const files = event.target.files;
+          
+                  for (let i = 0; i < files.length; i++) {
+                    const file = files[i];
+                    if (file.type.startsWith('image/')) {
+                      const reader = new FileReader();
+                      reader.onload = function (e) {
+                        const img = document.createElement('img');
+                        img.src = e.target.result;
+                        const previewIndex = i % 6; // Distribui as imagens nas 6 divs
+                        const preview = document.getElementById('preview' + previewIndex);
+                        preview.appendChild(img);
+                      };
+                      reader.readAsDataURL(file);
+                    }
+                  }
+                });
+              }); */
+
 
 
             document.addEventListener('DOMContentLoaded', function() {
@@ -806,10 +873,18 @@ openButton.addEventListener('click', () => {
 
 document.addEventListener('DOMContentLoaded', function() {
     const openButton = document.getElementById('win2');
+    const openButon = document.getElementById('win22')
     const postEdt = document.getElementById('post-edt');
     const closeButton = document.getElementById('closePostEdt');
 
     openButton.addEventListener('click', (event) => {
+        event.preventDefault();
+        event.stopPropagation(); // Impede que outros eventos de clique interfiram
+        postEdt.style.display = 'block';
+        document.addEventListener('click', closeOnClickOutside);
+    });
+
+    openButon.addEventListener('click', (event) => {
         event.preventDefault();
         event.stopPropagation(); // Impede que outros eventos de clique interfiram
         postEdt.style.display = 'block';
@@ -835,7 +910,7 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 // Seleciona todos os botões com a classe 'backButton'
-document.addEventListener('DOMContentLoaded', function() {
+/* document.addEventListener('DOMContentLoaded', function() {
     document.querySelectorAll('.backButton').forEach(button => {
         button.addEventListener('click', function(event) {
             // Impede que outros eventos interfiram
@@ -949,14 +1024,15 @@ function openFormPost(formPostId) {
     const backdrop1 = document.getElementById('backdrop1');
     backdrop1.style.display = 'none';
 }
-
+*/
 // Atribui a função aos botões
 document.getElementById('win22').addEventListener('click', function() {
     openFormPost('post-edt');
 });
-document.getElementById('win2').addEventListener('click', function() {
+/*document.getElementById('win2').addEventListener('click', function() {
     openFormPost('post-edt');
-});
+});*/
+
 
     
 
