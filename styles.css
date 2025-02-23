@@ -267,6 +267,7 @@ main {
 
         padding: 10px;
         padding-right: 90px;
+        max-width: 500px;
     }
 
     #publish-button {
@@ -300,6 +301,7 @@ main {
         display: flex;
         justify-content: center;
         align-items: flex-end;
+        margin-bottom: 50px;
     }
 
 
