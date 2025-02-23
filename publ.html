@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página de Publicação</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Open+Sans:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body class="light-mode">
+    <div class="page-container">
+        <header>
+            <div class="logo"><img src="./index.png"></div>
+            <div class="menuu">
+                <button id="dark-mode-toggle"><i class="fas fa-sun"></i></button>
+                <button id="menu-toggle">Menu</button>
+            </div>
+        </header>
+
+        <main>
+            <div id="preview-container"></div>
+            
+            <div id="form-container">
+                <form id="publish-form">
+                    <textarea id="text-input" placeholder="Escreva sua mensagem..."></textarea>
+                    <label for="file-upload" class="custom-file-upload">
+                        <i class="fas fa-upload"></i>
+                    </label>
+                    <input id="file-upload" type="file" multiple>
+                    <button id="publish-button" type="button"><i class="fas fa-paper-plane"></i> Publicar</button>
+                </form>
+            </div>
+        </main>
+
+        <div id="publish-options" class="modal">
+            <div class="modal-content" id="content11">
+                <span class="close">&times;</span>
+                <button class="openFormPost" id="principal">Principal</button>
+                <button class="openFormPost" id="btn-post1">Events</button>
+                <button class="openFormPost" id="btn-post2">Highlights</button>
+                <button class="openFormPost" id="btn-post3">Interviews</button>
+                <button class="openFormPost" id="btn-post4">News</button>
+                <button class="openFormPost" id="btn-post5">Daily Devotions</button>
+            </div>
+        </div>
+
+        <nav id="menu-modal" class="modal">
+            <div class="modal-content" id="content00">
+                <span class="close">&times;</span>
+                <a href="menu.html">Voltar ao Menu Principal</a>
+                <a href="admin.html">Voltar ao Menu do Administrador</a>
+            </div>
+        </nav>
+    </div>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
