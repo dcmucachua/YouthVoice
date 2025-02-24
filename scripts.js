@@ -97,3 +97,18 @@ document.addEventListener('DOMContentLoaded', () => {
         icon.classList.toggle('fa-moon');
     });
 });
+
+
+const textInput = document.getElementById('text-input');
+
+    textInput.addEventListener('focus', () => {
+      setTimeout(() => {
+        textInput.scrollIntoView({ behavior: 'smooth', block: 'end' });
+      }, 300);
+    });
+
+    textInput.addEventListener('input', () => {
+      if (textInput.scrollHeight > textInput.clientHeight) {
+        textInput.style.height = textInput.scrollHeight + 'px';
+      }
+    });
